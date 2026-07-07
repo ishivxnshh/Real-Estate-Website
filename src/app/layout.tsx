@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import ScrollToTop from "@/components/ScrollToTop";
 import "./globals.css";
 
 const inter = Inter({
@@ -67,7 +68,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfair.variable} h-full antialiased`}
+      className={`${inter.variable} ${playfair.variable} antialiased`}
       suppressHydrationWarning
     >
       <head>
@@ -78,8 +79,9 @@ export default function RootLayout({
       </head>
       <body className="bg-background text-on-background min-h-screen font-body-md text-body-md selection:bg-secondary-container selection:text-on-secondary-container flex flex-col">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          <ScrollToTop />
           <Navbar />
-          <main className="flex-1 w-full pt-20">
+          <main className="flex-1 w-full pt-32">
             {children}
           </main>
           <Footer />

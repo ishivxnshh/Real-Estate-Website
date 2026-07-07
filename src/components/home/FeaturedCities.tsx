@@ -60,9 +60,12 @@ export default function FeaturedCities() {
       </div>
       
       <div className="mt-16 text-center fade-in-up stagger-2">
-        <button className="bg-transparent hover:bg-black/5 dark:hover:bg-white/5 border border-black/20 dark:border-white/20 text-on-surface px-12 py-4 rounded-sm font-label-md tracking-widest uppercase transition-colors">
+        <Link 
+          href="/markets"
+          className="bg-transparent hover:bg-black/5 dark:hover:bg-white/5 border border-black/20 dark:border-white/20 text-on-surface px-12 py-4 rounded-sm font-label-md tracking-widest uppercase transition-colors inline-block"
+        >
           Show More Locations
-        </button>
+        </Link>
       </div>
     </section>
   );

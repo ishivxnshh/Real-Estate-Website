@@ -11,13 +11,13 @@ export default function Home() {
   return (
     <>
       {/* Immersive Hero Section */}
-      <section className="relative w-full h-[90vh] min-h-[700px] flex items-center justify-start px-margin-mobile md:px-margin-desktop fade-in-up">
+      <section className="relative w-full h-[100vh] min-h-[700px] flex items-center justify-start px-margin-mobile md:px-margin-desktop fade-in-up -mt-32">
         {/* Video Background */}
         <HeroVideoBackground />
 
         {/* Content */}
         <div className="relative z-10 max-w-4xl pt-20">
-          <span className="text-secondary font-label-md tracking-[0.2em] uppercase mb-6 block fade-in-up">
+          <span className="text-[#F2D06B] drop-shadow-md font-label-md tracking-[0.2em] uppercase mb-6 block fade-in-up">
             Housick Exclusive Collection
           </span>
           <h1 className="font-display-lg text-display-lg-mobile md:text-[85px] leading-[1.05] text-white mb-8 fade-in-up stagger-1">

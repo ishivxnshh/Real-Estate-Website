@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const LOCATIONS = [
   "Delhi",
@@ -19,6 +20,7 @@ export default function HeroSearchBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -80,7 +82,16 @@ export default function HeroSearchBar() {
         )}
       </div>
 
-      <button className="bg-primary hover:bg-primary/90 text-on-primary px-12 py-5 rounded font-label-md tracking-widest uppercase transition-colors md:w-auto w-full cursor-pointer shadow-lg shadow-primary/20">
+      <button 
+        onClick={() => {
+          if (selectedLocation) {
+            router.push(`/markets/${encodeURIComponent(selectedLocation.toLowerCase())}`);
+          } else {
+            router.push("/markets");
+          }
+        }}
+        className="bg-primary hover:bg-primary/90 text-on-primary px-12 py-5 rounded font-label-md tracking-widest uppercase transition-colors md:w-auto w-full cursor-pointer shadow-lg shadow-primary/20"
+      >
         Explore
       </button>
     </div>
