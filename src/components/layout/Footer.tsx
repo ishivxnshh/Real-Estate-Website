@@ -15,6 +15,12 @@ export default function Footer() {
       <div className="flex flex-col md:flex-row gap-6">
         <Link
           className="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200"
+          href="/about"
+        >
+          About Us
+        </Link>
+        <Link
+          className="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200"
           href="/privacy"
         >
           Privacy Policy

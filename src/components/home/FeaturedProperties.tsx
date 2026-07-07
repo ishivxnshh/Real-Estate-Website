@@ -32,7 +32,7 @@ const PROPERTIES = [
     id: 5,
     price: "₹ 28,50,00,000",
     title: "Beachfront Villa in Goa",
-    image: "https://images.unsplash.com/photo-1522008342704-6b265b543c46?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -80,13 +80,13 @@ export default function FeaturedProperties() {
         {/* Carousel */}
         <div 
           ref={scrollRef}
-          className="flex gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory no-scrollbar fade-in-up stagger-1"
+          className="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar fade-in-up stagger-1 pb-4"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {PROPERTIES.map((property) => (
             <div 
               key={property.id} 
-              className="min-w-[280px] md:min-w-[320px] lg:min-w-[340px] flex-shrink-0 snap-start group cursor-pointer"
+              className="w-[85vw] sm:w-[280px] lg:w-[calc(25%-1.125rem)] flex-shrink-0 snap-start group cursor-pointer"
             >
               <div className="relative aspect-square overflow-hidden mb-5 bg-surface-variant">
                 <img 
@@ -95,8 +95,8 @@ export default function FeaturedProperties() {
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
               </div>
-              <h3 className="font-body-md text-xl md:text-2xl mb-1 text-on-surface tracking-wide">{property.price}</h3>
-              <p className="font-body-md text-on-surface-variant text-[15px]">{property.title}</p>
+              <h3 className="font-body-md text-base md:text-[17px] tracking-wide text-on-surface/90 mb-1.5">{property.price}</h3>
+              <p className="font-body-sm text-on-surface-variant/90 text-[13px] md:text-[14px] font-light">{property.title}</p>
             </div>
           ))}
         </div>
